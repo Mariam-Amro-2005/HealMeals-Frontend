@@ -1,4 +1,14 @@
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Donate from "./pages/Donate";
+import Recipe from "./pages/Recipe";
+import Profile from "./pages/Profile";
+import HealthProfile from "./pages/HealthProfile";
+import Favorites from "./pages/Favorites";
+import Search from "./pages/Search";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+
 function App() {
   return (
     <>
