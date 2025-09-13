@@ -3,7 +3,7 @@ import "../css/home.css";
 
 function Header() {
     // const logoPath = `${import.meta.env.BASE_URL}/logo-no-text.jpg`;
-    const logoPath = "./logo-no-text.jpg";
+    const logoPath = "./logo.svg";
     return <>
     <nav className="navbar">
         <div className="logo">

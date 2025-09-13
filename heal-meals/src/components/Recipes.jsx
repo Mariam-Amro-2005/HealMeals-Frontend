@@ -1,4 +1,5 @@
 import RecipeCard from "./RecipeCard";
+import Pagination from "./Pagination";
 import "../css/recipes.css";
 
 function Recipes(props) {
@@ -20,10 +21,12 @@ function Recipes(props) {
             ))}
         </div>
 
-        <div className="recipes-pagination" style={{display: "flex"}}>
+        {/* <div className="recipes-pagination" style={{display: "flex"}}>
             <button className="prev-button"> &laquo; </button>
             <button className="next-button"> &raquo; </button>
-        </div>
+        </div> */}
+        {/* <Pagination totalPages={Math.ceil(recipes.length / 3)} /> */}
+        <Pagination totalPages={12} />
     </div>
     </>
 }

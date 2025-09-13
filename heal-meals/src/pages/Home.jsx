@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import InputField from "../components/InputField";
 import Recipes from "../components/Recipes";
 import { useState } from "react";
 import { Link } from "react-router-dom"
@@ -8,13 +9,15 @@ import { Link } from "react-router-dom"
 
 function Home() {
     const [logged, setLogged] = useState(false);
+    const [inputValue, setInputValue] = useState("");
+    
     return <>
     <Header />
 
-    <div className="welcome-container">
-        <div className="welcome-image">
+    <section className="welcome-container">
+        {/* <div className="welcome-image">
             <img src="./main-background.jpg" alt="Welcome to HealMeals" />
-        </div>
+        </div> */}
 
         <div className="welcome-text">
             <h3>Welcome to <span className="highlight">HealMeals</span></h3>
@@ -34,13 +37,21 @@ function Home() {
                 <img src="./discover.svg" alt = "discover icon" />
             </Link>
         </div>
-    </div>
+    </section>
+
+
+    {/* <InputField 
+        label="Search Recipes"
+        type="text"
+        value={inputValue}
+        onChange={e => setInputValue(e.target.value)}
+    /> */}
 
     <Recipes displayTitle="Most Popular Recipes" />
     { logged? 
     <Recipes displayTitle="Recently Viewed Recipes" show={true}/>
     : (
-        <div className="how-it-works-container">
+        <section className="how-it-works-container">
         <div className="how-it-works-image">
             <img src="./learning-to-cook.jpg" alt="Learning to Cook" />
         </div>
@@ -82,12 +93,12 @@ function Home() {
                 <div className="signup-button">Sign Up</div>
             </div>
         </div>
-    </div>
+    </section>
     ) }
 
-    <div className="about-container">
+    <section className="about-container">
         <div className="about-image">
-            <img src="./full-logo.jpg" alt="HealMeals Full Logo" />
+            <img src="./logo.svg" alt="HealMeals Full Logo" />
         </div>
         <div className="about-description">
             <h2 className="about-title">About HealMeals</h2>
@@ -112,9 +123,9 @@ function Home() {
                 because when you eat well, you live better.
             </p>
         </div>
-    </div>
+    </section>
 
-    <div className="disclaimer-container">
+    <section className="disclaimer-container">
         <div className="disclaimer-description">
             <h2 className="disclaimer-title">Medical Disclaimer</h2>
             <p>
@@ -129,10 +140,11 @@ function Home() {
         <div className="disclaimer-image">
             <img src="#" alt="Disclaimer Image" />
         </div>
-    </div>
+    </section>
 
     <Footer />
     </>
 }
 
 export default Home
+
