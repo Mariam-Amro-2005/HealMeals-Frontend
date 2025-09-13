@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/donate" element={<Donate />} />
-        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/health-profile" element={<HealthProfile />} />
         <Route path="/favorites" element={<Favorites />} />

@@ -1,6 +1,6 @@
 function Footer() {
     return <>
-    <p>&copy; HealMeals {new Date().getFullYear()}  </p>
+    <footer>&copy; HealMeals {new Date().getFullYear()}  </footer>
     </>
 }
 
